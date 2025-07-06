@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 250 30% 98%;
+    --foreground: 250 30% 15%;
+    --card: 250 30% 100%;
+    --card-foreground: 250 30% 15%;
+    --popover: 250 30% 100%;
+    --popover-foreground: 250 30% 15%;
+    --primary: 260 80% 65%;
+    --primary-foreground: 260 80% 10%;
+    --secondary: 250 30% 94%;
+    --secondary-foreground: 250 30% 20%;
+    --muted: 250 30% 94%;
+    --muted-foreground: 250 30% 45%;
+    --accent: 160 70% 40%;
+    --accent-foreground: 160 70% 95%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 250 30% 90%;
+    --input: 250 30% 90%;
+    --ring: 260 80% 65%;
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 250 30% 8%;
+    --foreground: 250 30% 92%;
+    --card: 250 30% 12%;
+    --card-foreground: 250 30% 92%;
+    --popover: 250 30% 8%;
+    --popover-foreground: 250 30% 92%;
+    --primary: 260 80% 70%;
+    --primary-foreground: 260 80% 15%;
+    --secondary: 250 30% 18%;
+    --secondary-foreground: 250 30% 92%;
+    --muted: 250 30% 18%;
+    --muted-foreground: 250 30% 65%;
+    --accent: 160 70% 50%;
+    --accent-foreground: 160 70% 10%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 250 30% 20%;
+    --input: 250 30% 20%;
+    --ring: 260 80% 70%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+}
